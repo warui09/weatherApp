@@ -1,10 +1,12 @@
-import React, { useEffect } from "react"
+import React, { useEffect } from "react";
 
 const Container = () => {
-  return(
-    <input />
-    <h2>hello</h2>
-  )
-}
+  return (
+    <div>
+      <input />
+      <h2>hello</h2>
+    </div>
+  );
+};
 
-export default Container
+export default Container;
