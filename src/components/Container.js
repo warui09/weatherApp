@@ -14,7 +14,7 @@ const Container = () => {
     <div>
       <Header />
       <InputLocation getLocation={getLocation} />
-      <Display />
+      <Display location={location} />
     </div>
   );
 };
