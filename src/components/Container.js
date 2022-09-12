@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Header from "./Header";
 import InputLocation from "./InputLocation";
+import Display from "./Display";
 
 const Container = () => {
   const [location, setLocation] = useState("");
@@ -8,7 +9,7 @@ const Container = () => {
     <div>
       <Header />
       <InputLocation />
-      <h2>hello</h2>
+      <Display />
     </div>
   );
 };
