@@ -5,10 +5,15 @@ import Display from "./Display";
 
 const Container = () => {
   const [location, setLocation] = useState("");
+
+  const getLocation = (e) => {
+    setLocation(e.target.value);
+  };
+
   return (
     <div>
       <Header />
-      <InputLocation />
+      <InputLocation getLocation={getLocation} />
       <Display />
     </div>
   );

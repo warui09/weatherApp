@@ -1,6 +1,6 @@
 import React from "react";
 
-const InputLocation = () => {
+const InputLocation = (props) => {
   const handleChange = () => {
     console.log("hi");
   };
@@ -13,7 +13,7 @@ const InputLocation = () => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <input onChange={handleChange} />
+        <input onChange={props.getLocation} />
         <button>Submit</button>
       </form>
     </div>
