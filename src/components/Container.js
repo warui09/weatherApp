@@ -19,7 +19,7 @@ const Container = () => {
       .then((response) => response.json())
       .then((data) => console.log(data));
   });
-  console.log(test);
+
   return (
     <div>
       <Header />
