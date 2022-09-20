@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Header from "./Header";
 import InputLocation from "./InputLocation";
 import Display from "./Display";
@@ -11,19 +11,22 @@ const Container = () => {
     setLocation(e.target.value);
   };
 
-  useEffect(() => {
-    console.log("hi");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('hahaha')
     fetch(
       `https://dataservice.accuweather.com/locations/v1/cities/search?apikey=${API_KEY}&q=${location}`
     )
       .then((response) => response.json())
       .then((data) => console.log(data));
-  });
+  }
+    
+  
 
   return (
     <div>
       <Header />
-      <InputLocation getLocation={getLocation} />
+      <InputLocation getLocation={getLocation} handleSubmit={handleSubmit} />
       <Display location={location} />
     </div>
   );
