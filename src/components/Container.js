@@ -4,7 +4,7 @@ import InputLocation from "./InputLocation";
 import Display from "./Display";
 
 const Container = () => {
-  const API_KEY = "test";
+  const API_KEY = "";
   const [location, setLocation] = useState("");
 
   const getLocation = (e) => {
@@ -13,15 +13,12 @@ const Container = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('hahaha')
     fetch(
       `https://dataservice.accuweather.com/locations/v1/cities/search?apikey=${API_KEY}&q=${location}`
     )
       .then((response) => response.json())
-      .then((data) => console.log(data));
-  }
-    
-  
+      .then((data) => console.log(data[0].Key));
+  };
 
   return (
     <div>
